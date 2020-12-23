@@ -5,9 +5,6 @@
 # 
 # This script will translate English text to Russian text and save output to .txt file.
 
-# In[1]:
-
-
 #create russian translator function
 from google_trans_new import google_translator  
  
@@ -17,9 +14,6 @@ def russian_trans(str):
  return str + ' // ' + translated
 
 russian_trans("Let's drink some wine!")
-
-
-# In[56]:
 
 
 #create a list of translations
@@ -34,18 +28,12 @@ for trans in ru_text:
     print(trans)
 
 
-# In[62]:
-
-
 #save translations to .txt file
 with open(r'C:\Users\keith\OneDrive\Desktop\Python Scripts\Russian Translations.txt', 'w', 
           encoding="utf-8") as my_file:
     my_file.write('Common Phrases in Russian!' + '\n' + '\n')
     for trans in ru_text:
         my_file.write(trans + '\n')
-
-
-# In[57]:
 
 
 #lets also get pronounciations
@@ -66,18 +54,9 @@ for trans in ru_pronounce:
     print(trans)
 
 
-# <br> 
-#  
-# <br>
-#  
-# <br>
-# 
-#  
 # # <center>Translate French News Website to English</center>
 # 
 # This script with translate h1,h2,h3 tags to English, place into list and save as .txt file.
-
-# In[3]:
 
 
 #translate French news website headlines to English
@@ -102,9 +81,6 @@ df = DataFrame(news,columns=['French'])
 df['English'] = df['French'].apply(translator.translate, lang_src='fr', 
                                                          lang_tgt='en')
 df.head(5)
-
-
-# In[74]:
 
 
 #turn translations into a list and save to .txt file
